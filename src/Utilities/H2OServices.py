@@ -2,7 +2,7 @@ import datetime
 from exceptions import IOError
 from threading import Thread
 
-import Utilities.jsonpickle as jsonpickle
+import jsonpickle
 import sys
 from wx.lib.pubsub import pub
 # from pubsub import pub
