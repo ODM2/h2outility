@@ -22,7 +22,7 @@ python ./src/SilentUpdater.py
 
 #### H2O Utility Installer ####
 
-To create a new installer, simply open the command prompt in the root folder, then run the following commands:
+To create a new installer for an updated H2O Utility, merge your changes into this branch. Update the installer.cfg file to include any added packages, and change any other parameters that may be out of date. Then simply open the command prompt in the root folder, then run the following commands:
 
 ```sh
 source windows_venv/Scripts/activate.bat
@@ -30,3 +30,4 @@ pynsist ./src/installer.cfg
 ```
 
 The installer is in "src/build". The nsis folder contains the installer and all necessary packages.
+
