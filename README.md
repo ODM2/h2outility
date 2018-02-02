@@ -20,30 +20,13 @@ python ./src/SilentUpdater.py
 
 ***
 
-#### Visual Updater Utility ####
+#### H2O Utility Installer ####
 
-VisualUpdater.py is used to create a series of "rules" used to collect HydroServer time series values, create CSV files, and upload these to HydroShare resources. To run, simply run the following command (arguments listed below are optional):
+To create a new installer, simply open the command prompt in the root folder, then run the following commands:
 
 ```sh
-python ./src/VisualUpdater.py
+source windows_venv/Scripts/activate.bat
+pynsist ./src/installer.cfg
 ```
 
-| Argument | Description |
-| --- | --- |
-|`--verbose`|Prints out extra output (lots and lots of extra output)|
-|`--debug`|Creates or overwrites log file `Log_File.txt`; stderr output is not redirected to log file|
-
-###### Running the Headless-mode SilentUpdater #####
-
-After you have established the HydroServer-HydroShare rules for your ODM time series, you can run the SilentUpdater.py script to update these without needing to use a GUI. This is useful for scheduling run times to keep your HydroShare resources up to date.
-
-To run the Silent Updater, simply run the following command (arguments listed below are optional):
-```sh
-python ./src/SilentUpdater.py
-```
-
-| Argument | Description |
-| --- | --- |
-|`--verbose`|Prints out extra output (lots and lots of extra output)|
-|`--debug`|Creates or overwrites log file `Log_{script}_File.txt`; stderr output is not redirected to log file|
-
+The installer is in "src/build". The nsis folder contains the installer and all necessary packages.

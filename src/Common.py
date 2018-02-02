@@ -32,11 +32,13 @@ class Common:
                 settings_file = item.split('--settings_file=')[1]
 
         self.IS_WINDOWS = 'nt' in os.name
-        self.PROJECT_DIR = str(os.path.dirname(os.path.realpath(__file__)))     # Root project directory
-        self.SETTINGS_FILE_NAME = self.PROJECT_DIR + '/' + settings_file        # Settings file name
-        self.DATASET_DIR = '{}/H2O_dataset_files/'.format(self.PROJECT_DIR)     # Directory for generated CSV files
-        self.LOGFILE_DIR = '{}/logs/'.format(self.PROJECT_DIR)                  # Directory for log files
-        self.GUI_MODE = False                                                   # If true, send logs to GUI
+        self.APP_LOCAL = os.getenv('LOCALAPPDATA')
+        self.PROJECT_DIR = str(os.path.dirname(os.path.realpath(__file__)))      # Root project directory
+        self.USER_APP_DIR = '{}/h2o_utility'.format(self.APP_LOCAL)
+        self.SETTINGS_FILE_NAME = self.USER_APP_DIR + '/' + settings_file        # Settings file name
+        self.DATASET_DIR = '{}/H2O_dataset_files/'.format(self.USER_APP_DIR)     # Directory for generated CSV files
+        self.LOGFILE_DIR = '{}/logs/'.format(self.USER_APP_DIR)                  # Directory for log files
+        self.GUI_MODE = False                                                    # If true, send logs to GUI
 
         """
         H2O-specific constants

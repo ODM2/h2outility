@@ -10,8 +10,12 @@ from Common import *
 __title__ = 'Visual H20 Utility'
 
 
-if __name__ == "__main__":
+def main():
     APP_SETTINGS = Common(sys.argv)
     app = wx.App()
     frame = VisualH2OWindow(None, -1, __title__)
     app.MainLoop()
+
+
+if __name__ == "__main__":
+    main()

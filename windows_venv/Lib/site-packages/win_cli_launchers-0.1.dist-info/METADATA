@@ -1,0 +1,9 @@
+Metadata-Version: 1.2
+Name: win_cli_launchers
+Version: 0.1
+Summary: Windows command line exe launchers for Python scripts
+Home-page: https://github.com/takluyver/win_cli_launchers
+License: UNKNOWN
+Author: Python Packaging Authority
+Author-email: distutils-sig@python.org
+Classifier: License :: OSI Approved :: MIT License
